@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dip"
+    android:layout_height="200dip" >
+
+    <TextView
+        android:id="@+id/txtView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="    Warning!!           한계이상의 기울기가 감지되었습니다!!  취소 버튼을 누르지 않으면 20 초 후 현재 위치를 탐색하여 SOS Message를 보냅니다."
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/confirm"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:text="취소"
+        android:layout_alignParentRight="true" />
+
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="64dp"
+        android:layout_alignTop="@+id/confirm"
+        android:layout_alignParentRight="true"
+        android:indeterminate="false" />
+
+</RelativeLayout>
+<!-- From: file:/D:/Android/Workspace/KSM/BTChat-master/app/src/main/res/layout/alert.xml -->

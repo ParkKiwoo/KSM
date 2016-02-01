@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#ffffff"
+    android:padding="30dp"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/bike"
+        android:id="@+id/ima1" />
+    <EditText
+        android:hint="Serial   번호   입력"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#890b0808"
+        android:layout_weight="0.45"
+        android:password="false"
+        android:phoneNumber="false"
+        android:id="@+id/ed1"
+        android:textSize="20sp">
+    </EditText>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="자동로그인"
+        android:id="@+id/chkbtn1"
+        android:checked="true">
+
+    </CheckBox>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:id="@+id/logBtn"
+        android:layout_gravity="center_horizontal" />
+
+</LinearLayout>

@@ -1,0 +1,181 @@
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@android:id/tabhost"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#065cb9">
+        </TabWidget>
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <LinearLayout
+                android:id="@+id/tab1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:weightSum="1">
+                <Switch
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/connect"
+                    android:id="@+id/switch1"
+                    android:background="#47a7ba"
+                    android:layout_weight="0.15"
+                    android:checked="false"
+                    android:clickable="true"
+                    android:enabled="true"
+                    android:textSize="20sp"
+                    android:outlineProvider="paddedBounds"
+                    android:textColor="#ffffff" />
+                <Switch
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ledbacklight"
+                    android:id="@+id/switch2"
+                    android:background="#47a7ba"
+                    android:layout_weight="0.15"
+                    android:textSize="20sp"
+                    android:checked="false"
+                    android:clickable="true"
+                    android:enabled="true"
+                    android:outlineProvider="paddedBounds"
+                    android:textColor="#ffffff" />
+                <Switch
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sosmessage"
+                    android:id="@+id/switch3"
+                    android:background="#47a7ba"
+                    android:layout_weight="0.15"
+                    android:textSize="20sp"
+                    android:checked="false"
+                    android:enabled="true"
+                    android:clickable="true"
+                    android:outlineProvider="paddedBounds"
+                    android:textColor="#ffffff" />
+                <Switch
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/gps"
+                    android:id="@+id/switch4"
+                    android:background="#47a7ba"
+                    android:layout_weight="0.15"
+                    android:textSize="20sp"
+                    android:checked="false"
+                    android:clickable="true"
+                    android:enabled="true"
+                    android:outlineProvider="paddedBounds"
+                    android:textColor="#ffffff" />
+                <Switch
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/weather"
+                    android:id="@+id/switch5"
+                    android:background="#47a7ba"
+                    android:layout_weight="0.15"
+                    android:textSize="20sp"
+                    android:checked="false"
+                    android:enabled="true"
+                    android:clickable="true"
+                    android:outlineProvider="paddedBounds"
+                    android:textColor="#ffffff" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.25">
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="주행하기!!"
+                        android:id="@+id/startBtn"
+                        android:layout_gravity="center_horizontal"
+                        android:textSize="30sp"
+                        android:background="#dacbbeba"
+                        android:layout_weight="0.5"
+                        android:clickable="true"/>
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="주행종료!!"
+                        android:id="@+id/stopBtn"
+                        android:layout_gravity="right"
+                        android:layout_weight="0.5"
+                        android:background="#dacbbeba"
+                        android:textSize="30sp"
+                        android:clickable="true"
+                        android:enabled="false"
+                        android:outlineProvider="paddedBounds" />/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="26dip"
+                    android:layout_gravity="bottom"
+                    android:orientation="horizontal"
+                    style="@style/AppTheme.ConnectionInfoContainer" >
+                    <ImageView
+                        android:id="@+id/status_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dip"
+                        android:layout_margin="3dip"
+                        />
+                    <TextView
+                        android:id="@+id/status_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dip"
+                        android:layout_margin="3dip"
+                        style="@style/AppTheme.ConnectionInfoText" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tab2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <WebView
+                    android:id="@+id/webView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="true" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tab3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tab4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+</TabHost>
