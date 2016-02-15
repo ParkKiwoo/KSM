@@ -45,10 +45,12 @@ import java.util.Timer;
 public class MainPage extends TabActivity {
 
     boolean flag = true;
-    Switch connectSW, ledSW, sosSW, gpsSW, weatherSW;
-    Button startBtn;
-    Button stopBtn;
+    public static Switch connectSW, ledSW, sosSW, gpsSW, weatherSW;
+    public static Button startBtn;
+    public static Button stopBtn;
     WebView web;
+    Intent service;
+    public static boolean messageFlag = true;
 
     private static final String TAG = "MainPage";
     public static BTCTemplateService mService;
@@ -69,8 +71,10 @@ public class MainPage extends TabActivity {
         sosSW.setEnabled(false);
         gpsSW.setEnabled(false);
         weatherSW.setEnabled(false);
-        Intent service= new Intent(getApplicationContext(), KSMService.class);
+        service = new Intent(getApplicationContext(), KSMService.class);
         startService(service);
+//        Intent intent = new Intent(this, Orientation.class);
+//        startActivity(intent);
     }
 
     public void stop(){
@@ -85,7 +89,7 @@ public class MainPage extends TabActivity {
         sosSW.setEnabled(true);
         gpsSW.setEnabled(true);
         weatherSW.setEnabled(true);
-        Intent service= new Intent(getApplicationContext(), KSMService.class);
+        service= new Intent(getApplicationContext(), KSMService.class);
         stopService(service);
     }
     void bluetooth() {
@@ -144,8 +148,8 @@ public class MainPage extends TabActivity {
                     Intent intent = new Intent(
                     Settings.ACTION_LOCATION_SOURCE_SETTINGS);
                     startActivity(intent);
-                    Intent intent1 = new Intent(getApplicationContext(), Gmap.class);
-                    startActivity(intent1);
+                    //Intent intent1 = new Intent(getApplicationContext(), Gmap.class);
+                    //startActivity(intent1);
                 }
             }
         });
@@ -160,8 +164,8 @@ public class MainPage extends TabActivity {
             @Override
             public void onClick(View v) {
                 start();
-                Intent intent = new Intent(getApplicationContext(), Orientation.class);
-                startActivity(intent);
+               // Intent intent = new Intent(getApplicationContext(), Orientation.class);
+               // startActivity(intent);
             }
         });
         stopBtn= (Button) findViewById(R.id.stopBtn);
@@ -189,14 +193,6 @@ public class MainPage extends TabActivity {
         TabSpec tabSpec2 = tabHost.newTabSpec("ksm").setIndicator("KSM NEWS");
         tabSpec2.setContent(R.id.tab2);
         tabHost.addTab(tabSpec2);
-
-        TabSpec tabSpec3 = tabHost.newTabSpec("rec").setIndicator("추천 코스");
-        tabSpec3.setContent(R.id.tab3);
-        tabHost.addTab(tabSpec3);
-
-        TabSpec tabSpec4 = tabHost.newTabSpec("etc").setIndicator("지도");
-        tabSpec4.setContent(R.id.tab4);
-        tabHost.addTab(tabSpec4);
 
         tabHost.setCurrentTab(0);
     }

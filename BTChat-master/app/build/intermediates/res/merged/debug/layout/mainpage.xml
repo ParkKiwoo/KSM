@@ -103,7 +103,7 @@
                     <Button
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="주행하기!!"
+                        android:text="주행하기"
                         android:id="@+id/startBtn"
                         android:layout_gravity="center_horizontal"
                         android:textSize="30sp"
@@ -114,7 +114,7 @@
                     <Button
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="주행종료!!"
+                        android:text="주행종료"
                         android:id="@+id/stopBtn"
                         android:layout_gravity="right"
                         android:layout_weight="0.5"
@@ -161,21 +161,7 @@
 
             </LinearLayout>
 
-            <LinearLayout
-                android:id="@+id/tab3"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/tab4"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-            </LinearLayout>
         </FrameLayout>
     </LinearLayout>
 
-</TabHost><!-- From: file:/D:/Android/Workspace/KSM/BTChat-master/app/src/main/res/layout/mainpage.xml -->
+</TabHost><!-- From: file:/D:/Android/Workspace/BTChat-master/app/src/main/res/layout/mainpage.xml -->
